@@ -1,0 +1,29 @@
+
+name: Day 1 - GitHub Actions Practice
+
+on:
+  push:
+    branches:
+      - practice-day1
+  workflow_dispatch:
+
+jobs:
+  learn-basics:
+    name: Learn Workflow Basics
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Print a message
+        run: echo "My first GitHub Actions practical"
+
+      - name: Understand the runner
+        run: |
+          echo "I am learning GitHub Actions"
+          echo "Runner operating system:"
+          uname -a
+
+      - name: Check Node.js
+        run: node --version
+
+      - name: Check npm
+        run: npm --version
